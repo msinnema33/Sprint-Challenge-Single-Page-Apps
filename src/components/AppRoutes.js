@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import CharacterList from "./CharacterList";
-// import Location from "./Location";
+import LocationList from './LocationsList';
+import EpisodeList from './EpisodeList';
+
 // import Episode from './Episode';
 function AppRoutes() {
   return (
@@ -10,20 +12,20 @@ function AppRoutes() {
         <nav className="main-nav">
           <ul>
             <li>
-              <Link to="/">Characters</Link>
-            </li>
-            {/* <li>
-              <Link to="/Location">Locations</Link>
+              <Link to="/CharacterList">Characters</Link>
             </li>
             <li>
-              <Link to="/Episode">Episodes</Link>
-            </li> */}
+              <Link to="/LocationList">Locations</Link>
+            </li>
+            <li>
+              <Link to="/EpisodeList">Episodes</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
-          {/* <Route path="/Location" component={Location} />
-          <Route path="/Episode" component={Episode} /> */}
-          <Route path="/" component={CharacterList} />
+          <Route path="/LocationList" component={LocationList} />
+          <Route path="/EpisodeList" component={EpisodeList} />
+          <Route path="/CharacterList" component={CharacterList} />
         </Switch>
       </div>
     </Router>

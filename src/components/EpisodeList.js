@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
-
-
-export default function LocationsList() {
+import axios from "axios";
+  
+  export default function EpisodeList() {
     const [data, setData] = useState([]);
     const [query, setQuery] = useState("");
     useEffect(() => {
       axios
-        .get('https://rickandmortyapi.com/api/location/')
+        .get('https://rickandmortyapi.com/api/episode/')
         .then(response => {
-         //console.log(response.data.results)
-          const locations = response.data.results.filter(
-            location =>
-              location.name
+          //console.log(response.data.results)
+          const episodes = response.data.results.filter(
+            episode =>
+              episode.name
                 .toLowerCase()
                 .includes(query.toLowerCase())
           );
-          //console.log("rick and morty locations", response);
-         setData(locations);
+          //console.log(episodes);
+          //console.log("rick and morty episodes", response);
+          setData(episodes);
+          //console.log('this is the ', data);
         });
     }, [query]);
     
@@ -25,8 +26,8 @@ export default function LocationsList() {
       setQuery(event.target.value);
     };
     return (
-      <div className="location">
-        <h1>List of Locations</h1>  
+      <div className="spells">
+       <h1>Episode List</h1>   
         <form className="search">
           <input
             type="text"
@@ -35,22 +36,22 @@ export default function LocationsList() {
             name="name"
             tabIndex="0"
             className="prompt search-name"
-            placeholder="search by Location"
+            placeholder="search by Episode"
             autoComplete="off"
           />
         </form>
-        <div className="location">
+        <div className="spell">
           {data.map(data => {
             return (
-              <div className="character-list " key={data.id}>
+              <div className="character-list" key={data.id}>
                 <h3 className="capital">
                   Name:  {data.name}
                 </h3>
                 <h3 className="capital">
-                  Dimension: {data.dimension}
+                  Air Date: {data.air_date}
                 </h3>
                 <h3 className="capital">
-                  Type: {data.type}
+                  Episode: {data.episode}
                 </h3>
               </div>
             );
@@ -58,4 +59,4 @@ export default function LocationsList() {
         </div>
       </div>
     );
-}
+  }

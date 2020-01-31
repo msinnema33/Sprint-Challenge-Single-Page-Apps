@@ -50,7 +50,7 @@ Follow these steps to set up and work on your project:
 - [x]  Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [x]  Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
 - [x]  Implement the project on this branch, committing changes regularly.
-- [ ]  Push commits: `git push origin <firstName-lastName>`.
+- [x]  Push commits: `git push origin <firstName-lastName>`.
 - [x]  **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
 - [x]  **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
 - [x]  **RUN** `yarn start` or `npm start` to fire up your React application.
@@ -111,9 +111,9 @@ There's a range of difficulty in the options below. 😈
 
 Start with the most *familiar (or fun) sounding* stretch goal.
 Complete search component to your list views.
-- [ ] Try adding 2 more components and display data from the episodes and locations end point.
-- [ ] https://rickandmortyapi.com/api/location/ - docs
-- [ ] https://rickandmortyapi.com/api/episode/ - docs
+- [x] Try adding 2 more components and display data from the episodes and locations end point.
+- [x] https://rickandmortyapi.com/api/location/ - docs
+- [x] https://rickandmortyapi.com/api/episode/ - docs
 
 - [ ]  Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
 - [ ]  Animate page transition and/or card loading.

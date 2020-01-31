@@ -26,7 +26,7 @@ export default function CharacterList() {
     setQuery(event.target.value);
   };
   return (
-    <div className="spells">
+    <div className="char">
       <h1>Character List</h1>  
       <form className="search">
         <input
@@ -40,13 +40,10 @@ export default function CharacterList() {
           autoComplete="off"
         />
       </form>
-      <div className="spell">
+      <div className="char">
         {data.map(data => {
           return (
-            <div
-              className="character-list "
-              key={data.id}
-            >
+            <div className="character-list " key={data.id}>
               <h3 className="capital">
                 Name:  {data.name}
               </h3>
@@ -59,9 +56,6 @@ export default function CharacterList() {
               <h3 className="capital">
                 Origin: {data.origin.name}
               </h3>
-              {/* <h3 className="capital">
-                More info: {data.url}
-              </h3> */}
             </div>
           );
         })}
