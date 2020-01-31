@@ -13,10 +13,8 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
-        <div className = 'routes'>
-          <AppRoutes />
-          </div>
-          </div>
+        <AppRoutes />
+        </div>
         </div>
       </header>
     </section>

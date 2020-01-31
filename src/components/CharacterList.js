@@ -51,7 +51,7 @@ export default function CharacterList() {
             name = {data.name}
             status = {data.status}
             species = {data.species}
-            origin = {data.origin.name}
+            // origin = {data.origin.name}
             />
           // (
           //   <div className="character-list " key={data.id}>

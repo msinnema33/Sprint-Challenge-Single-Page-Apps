@@ -8,9 +8,9 @@ import EpisodeList from './EpisodeList';
 function AppRoutes() {
   return (
     <Router>
-      <div>
+      <div className='app-menu'>
         <nav className="main-nav">
-          <ul>
+          <ul className = 'route-flex'>
             <li>
               <Link to="/CharacterList">Characters</Link>
             </li>

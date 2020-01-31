@@ -16,7 +16,7 @@ export default function CharacterCard(data) {
         <CardBody>
           <CardText>Status: {data.status}</CardText>
           <CardText>Species: {data.species}</CardText>
-          <CardText>Origin: {data.origin.name}</CardText>
+          {/* <CardText>Origin: {data.origin.name}</CardText> */}
         </CardBody>
       </Card>
     </Col>
