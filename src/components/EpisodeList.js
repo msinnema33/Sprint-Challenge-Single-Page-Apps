@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Container } from "reactstrap";
   
   export default function EpisodeList() {
     const [data, setData] = useState([]);
@@ -40,6 +41,9 @@ import axios from "axios";
             autoComplete="off"
           />
         </form>
+
+        <Container>
+            <Row>
         <div className="spell">
           {data.map(data => {
             return (
@@ -57,6 +61,8 @@ import axios from "axios";
             );
           })}
         </div>
+        </Row>
+        </Container>
       </div>
     );
   }

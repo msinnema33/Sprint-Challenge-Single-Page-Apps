@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import LocationCard from './LocationCard';
-
+import { Container, Row } from 'reactstrap';
 
 
 export default function LocationsList() {
@@ -41,6 +41,8 @@ export default function LocationsList() {
             autoComplete="off"
           />
         </form>
+        <Container>
+            <Row>
         <div className="location">
           {data.map(data => {
             return <LocationCard key={data.id}
@@ -50,6 +52,8 @@ export default function LocationsList() {
             />
           })}
         </div>
+        </Row>
+        </Container>
       </div>
     );
 }
