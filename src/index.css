@@ -38,7 +38,13 @@ header h1 {
   text-align: center;
 }
 
-.main-nav {
-  flex-direction: row;
-  width: 45%;
+.flex-nav {
+  display: flex;
+  
+}
+.routes {
+  text-decoration: none;
+  text-align: left;
+  margin-left: 10%;
+  padding: 10%;
 }

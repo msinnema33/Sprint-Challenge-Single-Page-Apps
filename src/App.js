@@ -8,7 +8,7 @@ export default function App() {
     <main>
       <Header />
       <WelcomePage />
-      <AppRoutes />
+      {/* <AppRoutes /> */}
     </main>
   );
 }
