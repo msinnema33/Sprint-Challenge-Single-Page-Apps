@@ -7,7 +7,6 @@ import {
   Col
 } from 'reactstrap';
 
-
 export default function EpisodeCard(data) {
   return (
     <Col xs="6" md="4" xl="3">

@@ -4,7 +4,6 @@ import CharacterList from "./CharacterList";
 import LocationList from './LocationsList';
 import EpisodeList from './EpisodeList';
 
-// import Episode from './Episode';
 function AppRoutes() {
   return (
     <Router>

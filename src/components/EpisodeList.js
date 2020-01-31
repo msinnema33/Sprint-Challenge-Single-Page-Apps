@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Container } from "reactstrap";
+import { Container, Row } from "reactstrap";
   
   export default function EpisodeList() {
     const [data, setData] = useState([]);
@@ -16,10 +16,7 @@ import { Container } from "reactstrap";
                 .toLowerCase()
                 .includes(query.toLowerCase())
           );
-          //console.log(episodes);
-          //console.log("rick and morty episodes", response);
           setData(episodes);
-          //console.log('this is the ', data);
         });
     }, [query]);
     

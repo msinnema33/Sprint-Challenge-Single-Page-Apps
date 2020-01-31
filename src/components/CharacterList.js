@@ -17,13 +17,10 @@ export default function CharacterList() {
               .toLowerCase()
               .includes(query.toLowerCase())
         );
-      //   console.log(characters);
-      //   console.log("rick and morty characters", response);
         setData(characters);
       //   console.log('this is the ', data);
       });
   }, [query]);
-  //console.log('this is the ', data);
   const handleInputChange = event => {
     setQuery(event.target.value);
   };
@@ -51,24 +48,7 @@ export default function CharacterList() {
             name = {data.name}
             status = {data.status}
             species = {data.species}
-            // origin = {data.origin.name}
             />
-          // (
-          //   <div className="character-list " key={data.id}>
-          //     <h3 className="capital">
-          //       Name:  {data.name}
-          //     </h3>
-          //     <h3 className="capital">
-          //       Status: {data.status}
-          //     </h3>
-          //     <h3 className="capital">
-          //       Species: {data.species}
-          //     </h3>
-          //     <h3 className="capital">
-          //       Origin: {data.origin.name}
-          //     </h3>
-          //   </div>
-          // );
         })}
       </div>
       </Row>

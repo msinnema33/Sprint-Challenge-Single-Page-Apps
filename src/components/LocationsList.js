@@ -18,7 +18,6 @@ export default function LocationsList() {
                 .toLowerCase()
                 .includes(query.toLowerCase())
           );
-          //console.log("rick and morty locations", response);
          setData(locations);
         });
     }, [query]);
