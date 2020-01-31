@@ -11,9 +11,6 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
-         <div>
-           Nav Links
-         </div>
         </div>
       </header>
     </section>

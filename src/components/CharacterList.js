@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import CharacterCard from './CharacterCard';
+import { Container, Row } from 'reactstrap';
 
 export default function CharacterList() {
   const [data, setData] = useState([]);
@@ -40,26 +42,37 @@ export default function CharacterList() {
           autoComplete="off"
         />
       </form>
+
+      <Container>
+        <Row>
       <div className="char">
         {data.map(data => {
-          return (
-            <div className="character-list " key={data.id}>
-              <h3 className="capital">
-                Name:  {data.name}
-              </h3>
-              <h3 className="capital">
-                Status: {data.status}
-              </h3>
-              <h3 className="capital">
-                Species: {data.species}
-              </h3>
-              <h3 className="capital">
-                Origin: {data.origin.name}
-              </h3>
-            </div>
-          );
+          return <CharacterCard key={data.id}
+            name = {data.name}
+            status = {data.status}
+            species = {data.species}
+            origin = {data.origin.name}
+            />
+          // (
+          //   <div className="character-list " key={data.id}>
+          //     <h3 className="capital">
+          //       Name:  {data.name}
+          //     </h3>
+          //     <h3 className="capital">
+          //       Status: {data.status}
+          //     </h3>
+          //     <h3 className="capital">
+          //       Species: {data.species}
+          //     </h3>
+          //     <h3 className="capital">
+          //       Origin: {data.origin.name}
+          //     </h3>
+          //   </div>
+          // );
         })}
       </div>
+      </Row>
+      </Container>
     </div>
   )
 }

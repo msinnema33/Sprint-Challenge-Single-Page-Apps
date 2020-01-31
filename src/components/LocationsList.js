@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import LocationCard from './LocationCard';
+
 
 
 export default function LocationsList() {
@@ -41,19 +43,11 @@ export default function LocationsList() {
         </form>
         <div className="location">
           {data.map(data => {
-            return (
-              <div className="character-list " key={data.id}>
-                <h3 className="capital">
-                  Name:  {data.name}
-                </h3>
-                <h3 className="capital">
-                  Dimension: {data.dimension}
-                </h3>
-                <h3 className="capital">
-                  Type: {data.type}
-                </h3>
-              </div>
-            );
+            return <LocationCard key={data.id}
+            name = {data.name}
+            dimension = {data.dimension}
+            type = {data.type}
+            />
           })}
         </div>
       </div>
